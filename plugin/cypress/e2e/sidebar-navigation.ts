@@ -92,7 +92,8 @@ When('user selects {string} namespace in the graph', (ns: string) => {
 Then('user sees Istio Config page elements from Kiali', () => {
   cy.wait('@istioConfigRequest').then(() => {
     cy.get('[data-test-id="filter-dropdown-toggle"]').should('be.visible');
-    cy.get('[data-test-id="dropdown-button"]').should('be.visible');
+    // OCP 4.19 and earlier use the dropdown-button, OCP 4.20 and later use the filter-dropdown-toggle
+    cy.get('[data-test-id="dropdown-button"], [data-test-id="filter-dropdown-toggle"]').should('be.visible');
     cy.get('[data-test-id="item-filter"]').should('be.visible');
   });
 });

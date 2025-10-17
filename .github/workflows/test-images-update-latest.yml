@@ -18,7 +18,7 @@ jobs:
     with:
       release_branch: ${{ github.ref_name }}
       images_tag: 'latest'
-      quay_org: 'kiali'
+      quay_org: 'mkralik3'
     secrets:
       QUAY_USER: ${{ secrets.QUAY_USER }}
       QUAY_PASSWORD: ${{ secrets.QUAY_PASSWORD }}

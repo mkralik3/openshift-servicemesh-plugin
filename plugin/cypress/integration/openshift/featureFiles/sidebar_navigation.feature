@@ -15,7 +15,7 @@ Feature: Kiali sidebar integration with OCP Console
   Scenario: Service mesh buttons are displayed
     Then buttons for Overview, Graph and Istio Config are displayed
 
-  Scenario: Overview page is displayed correctly
+  Scenario: Overview page is displayed correctly (simulation change in test)
     When user navigates to the OSSMC "Overview" page
     Then user sees istio-system overview card
 
